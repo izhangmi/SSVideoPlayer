@@ -1,5 +1,5 @@
 # SSVideoPlayer
-![](https://raw.githubusercontent.com/immrss/MSSAutoresizeLabelFlow/master/DemoGif.gif)
+![](https://raw.githubusercontent.com/immrss/SSVideoPlayer/master/Demo.gif)
 ## Features
 * Support both local and remote video resource.
 * Adjust the volume. (Not support simulator)
