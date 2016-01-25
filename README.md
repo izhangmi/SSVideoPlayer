@@ -28,5 +28,7 @@ SSVideoPlayContainer *playContainer = [[SSVideoPlayContainer alloc]initWithRootV
 [self presentViewController:playContainer animated:NO completion:nil];
 ```
 
+You can also play in your own custom view. See `SSVideoPlayer.h` for more information.
+
 ## License
 The project is available under the MIT license.
