@@ -18,13 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
-    
-    
-    
-    
 }
 
 - (IBAction)play:(id)sender {
