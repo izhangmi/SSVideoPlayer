@@ -275,7 +275,8 @@
     [self.view bringSubviewToFront:self.bottomBar];
     [self.view bringSubviewToFront:self.videoList];
     [self.view bringSubviewToFront:self.indicator];
-    [self.indicator startAnimating];
+    [self startIndicator];
+    [self hide];
 }
 
 - (SSVideoPlayer *)player {
@@ -308,29 +309,44 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (!self.videoListHidden) {
+        self.videoListHidden = YES;
+        [UIView animateWithDuration:0.15 animations:^{
+            self.videoList.frame = CGRectMake(self.view.bounds.size.width, 32, 300, self.view.bounds.size.height-76);
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
     if (self.hidden) {
-        [UIView animateWithDuration:0.25 animations:^{
+        [UIView animateWithDuration:0.15 animations:^{
             self.navigationController.navigationBar.alpha = 1;
             self.bottomBar.alpha = 1;
         } completion:^(BOOL finished) {
             self.hidden = NO;
+            [self hide];
         }];
     }
     else {
-        if (!self.videoListHidden) {
-            [UIView animateWithDuration:0.15 animations:^{
-                self.videoList.frame = CGRectMake(self.view.bounds.size.width, 32, 300, self.view.bounds.size.height-76);
-            } completion:^(BOOL finished) {
-                self.videoListHidden = YES;
-            }];
-        }
-        [UIView animateWithDuration:0.25 animations:^{
-            self.navigationController.navigationBar.alpha = 0;
-            self.bottomBar.alpha = 0;
-        } completion:^(BOOL finished) {
-            self.hidden = YES;
-        }];
+        [[self class]cancelPreviousPerformRequestsWithTarget:self selector:@selector(hideBar) object:self];
+        [self hideBar];
     }
+}
+
+- (void)hide {
+    [[self class]cancelPreviousPerformRequestsWithTarget:self selector:@selector(hideBar) object:self];
+    [self performSelector:@selector(hideBar) withObject:self afterDelay:4];
+}
+
+- (void)hideBar {
+    if (!self.videoListHidden) {
+        return;
+    }
+    [UIView animateWithDuration:0.15 animations:^{
+        self.navigationController.navigationBar.alpha = 0;
+        self.bottomBar.alpha = 0;
+    } completion:^(BOOL finished) {
+        self.hidden = YES;
+    }];
 }
 
 #pragma mark - SSVideoPlayerDelegate

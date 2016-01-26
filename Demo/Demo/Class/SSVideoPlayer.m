@@ -152,9 +152,12 @@ static NSString *const SSVideoPlayerItemLoadedTimeRangesKeyPath = @"loadedTimeRa
         }
     }
     else if ([keyPath isEqualToString:SSVideoPlayerItemLoadedTimeRangesKeyPath]) {
+        if (CMTIME_IS_INDEFINITE(self.currentPlayItem.duration)) {
+            return ;
+        }
         NSArray *array = self.currentPlayItem.loadedTimeRanges;
         CMTimeRange timeRange = [array.firstObject CMTimeRangeValue];
-        float duration = CMTimeGetSeconds(self.currentPlayItem.asset.duration);
+        float duration = CMTimeGetSeconds(self.currentPlayItem.duration);
         float current = CMTimeGetSeconds(timeRange.duration);
         if (self.bufferProgressBlock) {
             self.bufferProgressBlock(current/duration);
