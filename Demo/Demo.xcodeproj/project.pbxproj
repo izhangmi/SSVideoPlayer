@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F0C062D1C58AB050032E658 /* SSVideoPlayContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0C06251C58AB050032E658 /* SSVideoPlayContainer.m */; };
+		6F0C062E1C58AB050032E658 /* SSVideoPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0C06271C58AB050032E658 /* SSVideoPlayController.m */; };
+		6F0C062F1C58AB050032E658 /* SSVideoPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6F0C06281C58AB050032E658 /* SSVideoPlayer.bundle */; };
+		6F0C06301C58AB050032E658 /* SSVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0C062A1C58AB050032E658 /* SSVideoPlayer.m */; };
+		6F0C06311C58AB050032E658 /* SSVideoPlaySlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0C062C1C58AB050032E658 /* SSVideoPlaySlider.m */; };
 		6FA3CABB1C53338D00103058 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6FA3CABA1C53338D00103058 /* test.mp4 */; };
-		6FA3CAEC1C5479A500103058 /* SSVideoPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6FA3CAEB1C5479A500103058 /* SSVideoPlayer.bundle */; };
 		6FB29A931C52102C00B6BE06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB29A921C52102C00B6BE06 /* main.m */; };
 		6FB29A961C52102C00B6BE06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB29A951C52102C00B6BE06 /* AppDelegate.m */; };
 		6FB29A991C52102C00B6BE06 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB29A981C52102C00B6BE06 /* ViewController.m */; };
@@ -17,10 +21,6 @@
 		6FB29AA11C52102C00B6BE06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB29A9F1C52102C00B6BE06 /* LaunchScreen.storyboard */; };
 		6FB29AAC1C52102C00B6BE06 /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB29AAB1C52102C00B6BE06 /* DemoTests.m */; };
 		6FB29AB71C52102C00B6BE06 /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB29AB61C52102C00B6BE06 /* DemoUITests.m */; };
-		6FB29ACD1C52122300B6BE06 /* SSVideoPlayContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB29AC61C52122300B6BE06 /* SSVideoPlayContainer.m */; };
-		6FB29ACE1C52122300B6BE06 /* SSVideoPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB29AC81C52122300B6BE06 /* SSVideoPlayController.m */; };
-		6FB29ACF1C52122300B6BE06 /* SSVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB29ACA1C52122300B6BE06 /* SSVideoPlayer.m */; };
-		6FB29AD01C52122300B6BE06 /* SSVideoPlaySlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB29ACC1C52122300B6BE06 /* SSVideoPlaySlider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F0C06241C58AB050032E658 /* SSVideoPlayContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVideoPlayContainer.h; sourceTree = "<group>"; };
+		6F0C06251C58AB050032E658 /* SSVideoPlayContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVideoPlayContainer.m; sourceTree = "<group>"; };
+		6F0C06261C58AB050032E658 /* SSVideoPlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVideoPlayController.h; sourceTree = "<group>"; };
+		6F0C06271C58AB050032E658 /* SSVideoPlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVideoPlayController.m; sourceTree = "<group>"; };
+		6F0C06281C58AB050032E658 /* SSVideoPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SSVideoPlayer.bundle; sourceTree = "<group>"; };
+		6F0C06291C58AB050032E658 /* SSVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVideoPlayer.h; sourceTree = "<group>"; };
+		6F0C062A1C58AB050032E658 /* SSVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVideoPlayer.m; sourceTree = "<group>"; };
+		6F0C062B1C58AB050032E658 /* SSVideoPlaySlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVideoPlaySlider.h; sourceTree = "<group>"; };
+		6F0C062C1C58AB050032E658 /* SSVideoPlaySlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVideoPlaySlider.m; sourceTree = "<group>"; };
 		6FA3CABA1C53338D00103058 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
-		6FA3CAEB1C5479A500103058 /* SSVideoPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SSVideoPlayer.bundle; sourceTree = "<group>"; };
 		6FB29A8E1C52102C00B6BE06 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB29A921C52102C00B6BE06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6FB29A941C52102C00B6BE06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -59,14 +67,6 @@
 		6FB29AB21C52102C00B6BE06 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB29AB61C52102C00B6BE06 /* DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoUITests.m; sourceTree = "<group>"; };
 		6FB29AB81C52102C00B6BE06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FB29AC51C52122300B6BE06 /* SSVideoPlayContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVideoPlayContainer.h; sourceTree = "<group>"; };
-		6FB29AC61C52122300B6BE06 /* SSVideoPlayContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVideoPlayContainer.m; sourceTree = "<group>"; };
-		6FB29AC71C52122300B6BE06 /* SSVideoPlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVideoPlayController.h; sourceTree = "<group>"; };
-		6FB29AC81C52122300B6BE06 /* SSVideoPlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVideoPlayController.m; sourceTree = "<group>"; };
-		6FB29AC91C52122300B6BE06 /* SSVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVideoPlayer.h; sourceTree = "<group>"; };
-		6FB29ACA1C52122300B6BE06 /* SSVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVideoPlayer.m; sourceTree = "<group>"; };
-		6FB29ACB1C52122300B6BE06 /* SSVideoPlaySlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVideoPlaySlider.h; sourceTree = "<group>"; };
-		6FB29ACC1C52122300B6BE06 /* SSVideoPlaySlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVideoPlaySlider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +94,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F0C06231C58AB050032E658 /* SSVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				6F0C06241C58AB050032E658 /* SSVideoPlayContainer.h */,
+				6F0C06251C58AB050032E658 /* SSVideoPlayContainer.m */,
+				6F0C06261C58AB050032E658 /* SSVideoPlayController.h */,
+				6F0C06271C58AB050032E658 /* SSVideoPlayController.m */,
+				6F0C06281C58AB050032E658 /* SSVideoPlayer.bundle */,
+				6F0C06291C58AB050032E658 /* SSVideoPlayer.h */,
+				6F0C062A1C58AB050032E658 /* SSVideoPlayer.m */,
+				6F0C062B1C58AB050032E658 /* SSVideoPlaySlider.h */,
+				6F0C062C1C58AB050032E658 /* SSVideoPlaySlider.m */,
+			);
+			name = SSVideoPlayer;
+			path = ../../SSVideoPlayer;
+			sourceTree = "<group>";
+		};
 		6FB29A851C52102C00B6BE06 = {
 			isa = PBXGroup;
 			children = (
@@ -117,8 +134,8 @@
 		6FB29A901C52102C00B6BE06 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				6F0C06231C58AB050032E658 /* SSVideoPlayer */,
 				6FA3CABA1C53338D00103058 /* test.mp4 */,
-				6FB29AC41C52122300B6BE06 /* Class */,
 				6FB29A941C52102C00B6BE06 /* AppDelegate.h */,
 				6FB29A951C52102C00B6BE06 /* AppDelegate.m */,
 				6FB29A971C52102C00B6BE06 /* ViewController.h */,
@@ -156,22 +173,6 @@
 				6FB29AB81C52102C00B6BE06 /* Info.plist */,
 			);
 			path = DemoUITests;
-			sourceTree = "<group>";
-		};
-		6FB29AC41C52122300B6BE06 /* Class */ = {
-			isa = PBXGroup;
-			children = (
-				6FA3CAEB1C5479A500103058 /* SSVideoPlayer.bundle */,
-				6FB29AC51C52122300B6BE06 /* SSVideoPlayContainer.h */,
-				6FB29AC61C52122300B6BE06 /* SSVideoPlayContainer.m */,
-				6FB29AC71C52122300B6BE06 /* SSVideoPlayController.h */,
-				6FB29AC81C52122300B6BE06 /* SSVideoPlayController.m */,
-				6FB29AC91C52122300B6BE06 /* SSVideoPlayer.h */,
-				6FB29ACA1C52122300B6BE06 /* SSVideoPlayer.m */,
-				6FB29ACB1C52122300B6BE06 /* SSVideoPlaySlider.h */,
-				6FB29ACC1C52122300B6BE06 /* SSVideoPlaySlider.m */,
-			);
-			path = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,10 +278,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F0C062F1C58AB050032E658 /* SSVideoPlayer.bundle in Resources */,
 				6FB29AA11C52102C00B6BE06 /* LaunchScreen.storyboard in Resources */,
 				6FB29A9E1C52102C00B6BE06 /* Assets.xcassets in Resources */,
 				6FA3CABB1C53338D00103058 /* test.mp4 in Resources */,
-				6FA3CAEC1C5479A500103058 /* SSVideoPlayer.bundle in Resources */,
 				6FB29A9C1C52102C00B6BE06 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,11 +309,11 @@
 			files = (
 				6FB29A991C52102C00B6BE06 /* ViewController.m in Sources */,
 				6FB29A961C52102C00B6BE06 /* AppDelegate.m in Sources */,
-				6FB29ACF1C52122300B6BE06 /* SSVideoPlayer.m in Sources */,
-				6FB29ACE1C52122300B6BE06 /* SSVideoPlayController.m in Sources */,
+				6F0C06301C58AB050032E658 /* SSVideoPlayer.m in Sources */,
+				6F0C062E1C58AB050032E658 /* SSVideoPlayController.m in Sources */,
 				6FB29A931C52102C00B6BE06 /* main.m in Sources */,
-				6FB29ACD1C52122300B6BE06 /* SSVideoPlayContainer.m in Sources */,
-				6FB29AD01C52122300B6BE06 /* SSVideoPlaySlider.m in Sources */,
+				6F0C062D1C58AB050032E658 /* SSVideoPlayContainer.m in Sources */,
+				6F0C06311C58AB050032E658 /* SSVideoPlaySlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +452,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: xiang ji (S7F6V3KUG2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -464,7 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: xiang ji (S7F6V3KUG2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
