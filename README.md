@@ -15,13 +15,9 @@
 
 ```objective-c
 NSMutableArray *videoList = [NSMutableArray array];
-SSVideoModel *model1 = [[SSVideoModel alloc]init];
-model1.name = @"video1";
-model1.path = @"https://demo.cn/video1.mp4";
+SSVideoModel *model1 = [[SSVideoModel alloc]initWithName:@"video1" path:@"https://demo.cn/video1.mp4"];
 [videoList addObject:model1];
-SSVideoModel *model2 = [[SSVideoModel alloc]init];
-model2.name = @"video2";
-model2.path = [[NSBundle mainBundle]pathForResource:@"video2" ofType:@"mp4"];
+SSVideoModel *model2 = [[SSVideoModel alloc]initWithName:@"video2" path:[[NSBundle mainBundle]pathForResource:@"video2" ofType:@"mp4"]];
 [videoList addObject:model2];
 SSVideoPlayController *playController = [[SSVideoPlayController alloc]initWithVideoList:videoList];
 SSVideoPlayContainer *playContainer = [[SSVideoPlayContainer alloc]initWithRootViewController:playController];
