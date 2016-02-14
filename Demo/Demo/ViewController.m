@@ -30,9 +30,7 @@
     NSArray *names = @[@"First Love",@"I Kiss You in My Dreams",@"Take You Over",@"Keep Finding a Way",@"You're Beautiful"];
     NSMutableArray *videoList = [NSMutableArray array];
     for (NSInteger i = 0; i<paths.count; i++) {
-        SSVideoModel *model = [[SSVideoModel alloc]init];
-        model.path = paths[i];
-        model.name = names[i];
+        SSVideoModel *model = [[SSVideoModel alloc]initWithName:names[i] path:paths[i]];
         [videoList addObject:model];
     }
     SSVideoPlayController *playController = [[SSVideoPlayController alloc]initWithVideoList:videoList];

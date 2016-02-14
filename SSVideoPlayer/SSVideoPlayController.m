@@ -13,6 +13,15 @@
 
 @implementation SSVideoModel
 
+- (instancetype)initWithName:(NSString *)name path:(NSString *)path {
+    self = [super init];
+    if (self) {
+        _name = [name copy];
+        _path = [path copy];
+    }
+    return self;
+}
+
 @end
 
 @interface SSVideoPlayController () <UITableViewDataSource,UITableViewDelegate,SSVideoPlayerDelegate>

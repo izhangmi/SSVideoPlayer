@@ -10,8 +10,10 @@
 
 @interface SSVideoModel : NSObject
 
-@property (nonatomic,copy) NSString *path;
-@property (nonatomic,copy) NSString *name;
+@property (nonatomic,copy,readonly) NSString *path;
+@property (nonatomic,copy,readonly) NSString *name;
+
+- (instancetype)initWithName:(NSString *)name path:(NSString *)path;
 
 @end
 
