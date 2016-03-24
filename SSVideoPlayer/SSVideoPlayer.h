@@ -15,7 +15,7 @@
 
 @optional
 
-- (void)videoPlayerDidReadyPlay:(SSVideoPlayer *)videoPlayer;
+- (void)videoPlayerDidReadyPlay:(SSVideoPlayer *)videoPlayer withDuration:(float)duration;
 
 - (void)videoPlayerDidBeginPlay:(SSVideoPlayer *)videoPlayer;
 
@@ -65,5 +65,6 @@ typedef NS_ENUM(NSInteger,SSVideoPlayerDisplayMode) {
 
 - (void)pause;
 
+- (NSString*)formattedDuration:(float)duration;
 
 @end

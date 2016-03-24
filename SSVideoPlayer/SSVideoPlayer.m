@@ -6,8 +6,10 @@
 //  Copyright © 2016年 expai. All rights reserved.
 //
 
+
 #import "SSVideoPlayer.h"
 #import <AVFoundation/AVFoundation.h>
+#import <math.h>
 
 static NSString *const SSVideoPlayerItemStatusKeyPath = @"status";
 static NSString *const SSVideoPlayerItemLoadedTimeRangesKeyPath = @"loadedTimeRanges";
@@ -100,7 +102,7 @@ static NSString *const SSVideoPlayerItemLoadedTimeRangesKeyPath = @"loadedTimeRa
     [playItem addObserver:self forKeyPath:SSVideoPlayerItemStatusKeyPath options:NSKeyValueObservingOptionNew context:NULL];
     [playItem addObserver:self forKeyPath:SSVideoPlayerItemLoadedTimeRangesKeyPath options:NSKeyValueObservingOptionNew context:NULL];
     [self.player replaceCurrentItemWithPlayerItem:playItem];
-    _duration = CMTimeGetSeconds(self.currentPlayItem.duration);
+    //    _duration = CMTimeGetSeconds(self.currentPlayItem.duration);
     __weak SSVideoPlayer *weakSelf = self;
     self.observer = [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1.0, 1.0) queue:dispatch_get_global_queue(0, 0) usingBlock:^(CMTime time) {
         if (CMTIME_IS_INDEFINITE(weakSelf.currentPlayItem.duration)) {
@@ -141,8 +143,9 @@ static NSString *const SSVideoPlayerItemLoadedTimeRangesKeyPath = @"loadedTimeRa
     if ([keyPath isEqualToString:SSVideoPlayerItemStatusKeyPath]) {
         AVPlayerStatus status = [change[NSKeyValueChangeNewKey]integerValue];
         if (status == AVPlayerStatusReadyToPlay) {
-            if ([self.delegate respondsToSelector:@selector(videoPlayerDidReadyPlay:)]) {
-                [self.delegate videoPlayerDidReadyPlay:self];
+            if ([self.delegate respondsToSelector:@selector(videoPlayerDidReadyPlay:withDuration:)]) {
+                _duration = CMTimeGetSeconds(self.currentPlayItem.asset.duration);
+                [self.delegate videoPlayerDidReadyPlay:self withDuration:_duration];
             }
         }
         else if (status == AVPlayerStatusFailed) {
@@ -208,6 +211,22 @@ static NSString *const SSVideoPlayerItemLoadedTimeRangesKeyPath = @"loadedTimeRa
         return;
     }
     [self.player pause];
+}
+
+- (NSString*)formattedDuration:(float)duration
+{
+    if(!duration) return @"0:00";
+    
+    int divisor_for_minutes = fmodf(duration,(60 * 60));
+    int minutes = floor(divisor_for_minutes / 60);
+    int divisor_for_seconds = fmodf(divisor_for_minutes, 60);
+    int seconds = ceil(divisor_for_seconds);
+    
+    return [NSString stringWithFormat:@"%@%i:%@%i",
+            minutes < 10 ? @"0" : @"",
+            minutes,
+            seconds < 10 ? @"0" : @"",
+            seconds];
 }
 
 - (void)dealloc {
